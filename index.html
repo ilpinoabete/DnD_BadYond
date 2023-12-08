@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <title>Manuale del DM</title>
+</head>
+<body>
+    <overlay id="login-form">
+        <div class="container-overlay">
+            <div class="container-overlay-title">
+                <h1>Login</h1>
+                <button>X</button>
+            </div>
+
+            <div>
+                <input type="text" name="User" id="user" placeholder="Username or Email">
+            </div>
+            
+            <div>
+                <input type="password" name="Password" id="password" placeholder="Password">
+            </div>
+
+            <div>
+                <button>Login</button>
+            </div>
+        </div>
+    </overlay>
+
+    <overlay id="signup-form">
+        <div class="container-overlay">
+            <div class="container-overlay-title">
+                <h1>Signup</h1>
+                <button>X</button>
+            </div>
+
+            <div>
+                <input type="text" name="User" id="user" placeholder="Username or Email">
+            </div>
+            
+            <div>
+                <input type="password" name="Password" id="password" placeholder="Password">
+            </div>
+
+            <div>
+                <input type="name" name="name" id="name" placeholder="Name">
+            </div>
+
+            <div>
+                <input type="surname" name="surname" id="surname" placeholder="surname">
+            </div>
+            
+            <div>
+                <button>Signup</button>
+            </div>
+        </div>
+    </overlay>
+
+    <header>
+        <div class="header-logo">
+            <h2 style="color: rgb(152, 4, 11) ;">D&D</h2>
+            <h2>BadYond</h2>
+        </div>
+
+        <div class="header-search">
+                <img src="https://www.dndbeyond.com/content/1-0-2598-0/skins/waterdeep/images/icons/search-grey.svg">
+                <input type="text" placeholder="Questo campo non serve a niente">
+        </div>
+
+        <div class="header-login">
+            <button class="login">Login</button>
+            <button class="signup">Signup</button>
+        </div>
+
+        <button class="menu-toggle">
+            <img src="menu.png">
+        </button>
+    </header>
+
+    <links>
+        <a href="https://dnd.wizards.com/how-to-play" target="_blank">Guide</a>
+        <a href="https://www.dndbeyond.com/" target="_blank">Beyond</a>
+        <a href="https://th.bing.com/th/id/OIP.qckPmyDXU3yC1TP07KnDjQHaH9?rs=1&pid=ImgDetMain" target="_blank">Chi Siamo</a>
+        <a href="https://www.youtube.com/watch?v=l0qvxPPISuY" target="_blank">Supporto (morale)</a>
+    </links>
+
+    <menu id="burger-menu">
+        <div class="menu-search">
+            <input type="text" placeholder="Questo campo non serve a niente">
+        </div>
+
+        <links style="display: grid;">
+            <a href="https://dnd.wizards.com/how-to-play" target="_blank">Guide</a>
+            <a href="https://www.dndbeyond.com/" target="_blank">Beyond</a>
+            <a href="https://th.bing.com/th/id/OIP.qckPmyDXU3yC1TP07KnDjQHaH9?rs=1&pid=ImgDetMain" target="_blank">Chi Siamo</a>
+            <a href="https://www.youtube.com/watch?v=l0qvxPPISuY" target="_blank">Supporto (morale)</a>
+        </links>
+
+        <div class="menu-button">
+            <button >Login</button>
+            <button >Signup</button>
+        </div>
+    </menu>
+
+    <main>
+        <h1>Dungeon Master</h1>
+        <flex>
+            <div class="flex-text">
+                <h3>    
+                    Il DM è il principale narratore e arbitro del gioco. In altre parole, è colui che si occupa di far avanzare l'avventura per i giocatori, che ne affrontano i pericoli e decidono cosa esplorare.
+                    Il DM ha il compito di creare l'ambientazione, i personaggi non giocanti, le trame e le sfide dell'avventura, mantenendo al contempo la continuità realistica degli avvenimenti nel dungeon. 
+                    Inoltre, il DM deve avere una buona conoscenza e comprensione delle regole del gioco. 
+                    <br>
+                    In generale, il DM controlla tutto quanto a esclusione dei Personaggi Giocanti.
+                    Ciò significa che ogni cosa e personaggio in cui si imbattono o con cui interagiscono i PG, sono controllati dal DM.
+                    Tuttavia, il DM non è contro i PG. Lo scopo di qualunque GDR dovrebbe essere quello di intrattenere e divertire "tutte" le persone coinvolte. Le risposte del DM ai giocatori, le situazioni che presenta, le sfide che crea, le storie che mette assieme: tutto ciò dovrebbe essere bilanciato in modo da fornire un'esperienza divertente per tutti.
+                </h3>
+            </div>
+
+            <div class="flex-info">
+                <div class="flex-container">
+                    <img src="https://abovethelaw.com/uploads/2018/01/nerd.jpg" alt="Immagine del classico DM" class="logo">
+                </div>
+                <div class="flex-container">
+                    <h2>Caratteristiche:</h2>
+                    <ul>
+                        <li>
+                            <h3>Non ha mai toccato l'erba</h3>
+                        </li>
+                        <li>
+                            <h3>Nessuno l'ha mai visto lavarsi</h3>
+                        </li>
+                        <li>
+                            <h3>Soffre di schizofrenia</h3>
+                        </li>
+                    </ul>
+
+                    <h2>Conoscenza del gioco:</h2>
+                    <h3>Decisamente troppa, passa tutte le sue giornate nel suo scantinato a mangiare fast food, bere soft drink e leggere il manuale del DM</h3>
+                </div>
+            </div>
+        </flex>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <a href="https://github.com/ilpinoabete/" target="_blank">
+                <img src="logo.jpg" class="logo">
+            </a>
+            <h2>Developed by PinoAbete</h2>
+        </div>
+        <links style="display: grid;" class="footer-grid">
+            <a href="https://www.dndbeyond.com/" target="_blank">Sito originale</a>
+            <a href="" target="_blank">Citazione onorevole</a>
+            <a href="https://www.youtube.com/playlist?list=PLFVd9VXb61Q3xQKjUlVboeHycYlu_8pjx" target="_blank">Video di ispirazione</a>
+            <a href="https://www.youtube.com/watch?v=pWJNY_qwXAk" target="_blank">Colonna sonora</a>
+        </links>
+    </footer>
+</body>
+</html>

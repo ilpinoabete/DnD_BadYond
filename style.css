@@ -105,6 +105,11 @@ flex{
 main h1{
     text-align: center;
 }
+main img{
+    max-width: 300px;
+    scale: auto;
+    width: auto;
+}
 main .title{
     display: flex;
     flex-wrap: nowrap;
@@ -119,6 +124,13 @@ main .title button{
 }
 main .class{
     display: none;
+}
+main .imgs{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
 }
 
 input{
@@ -158,6 +170,8 @@ a{
     flex: 4;
 
     text-align: justify;
+    line-height: 2;
+    word-spacing: 0.20vw;
 }
 .flex-info{
     flex: 2;
@@ -364,13 +378,13 @@ a{
         display: none;
     }
     .footer-grid{
+        text-align: center;
+
         grid-template-rows: repeat(2,auto);
         grid-template-columns: repeat(2,auto);
-        grid-row-gap: 15px;
+        grid-row-gap: 20px;
     }
-    .flex-text img{
-        display: none;
-    }
+
 }
 @media screen and (max-width: 1350px) {
     flex{
@@ -381,15 +395,18 @@ a{
         border: none;
     }
 }
-
 @media screen and (max-width: 500px) {
     .flex-container{
         text-align: left;
     }
     .footer-grid{
+        text-align: center;
         grid-template-rows: repeat(4,auto);
         grid-template-columns: auto;
-        grid-row-gap: 15px;
+        grid-row-gap: 20px;
+    }
+    main .imgs{
+        display: none;
     }
 }
 

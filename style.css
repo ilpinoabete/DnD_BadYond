@@ -94,16 +94,31 @@ overlay{
     left: 0px;
     right: 0px;
   }
-
-main h1{
-    text-align: center;
-}
 flex{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     gap: 40px;
     line-height: 1.5;
+}
+
+main h1{
+    text-align: center;
+}
+main .title{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    height: fit-content;
+
+    margin-bottom: 10px;
+}
+main .title button{
+    background-color: transparent;
+}
+main .class{
+    display: none;
 }
 
 input{
@@ -121,8 +136,6 @@ button{
     border: none;
 
     border-radius: 5px;
-
-    height: 100%;
 
     width: 10vw;
     min-width: 75px;
@@ -161,6 +174,7 @@ a{
 
     text-align: justify;
 }
+
 
 /* Classi per l'overlay */
 .container-overlay{
@@ -353,6 +367,9 @@ a{
         grid-template-rows: repeat(2,auto);
         grid-template-columns: repeat(2,auto);
         grid-row-gap: 15px;
+    }
+    .flex-text img{
+        display: none;
     }
 }
 @media screen and (max-width: 1350px) {

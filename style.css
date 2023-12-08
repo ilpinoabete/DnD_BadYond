@@ -189,7 +189,6 @@ a{
     text-align: justify;
 }
 
-
 /* Classi per l'overlay */
 .container-overlay{
     position: relative;
@@ -297,7 +296,9 @@ a{
     height: 50%;
 }
 
-/* Classi per il menù */
+/* Classi per i menù */
+
+/* Hamburger menù */
 .menu-toggle{
     display: none;
     padding: 0px;
@@ -405,7 +406,7 @@ a{
         grid-template-columns: auto;
         grid-row-gap: 20px;
     }
-    main .imgs{
+    main .imgs, main h2{
         display: none;
     }
 }
@@ -428,5 +429,8 @@ a{
     links a:hover{
         transform: scale(1.2);
         transition: 0.2s;
+    }
+    .title h1:hover .dropdown:hover{
+        display: block;
     }
 }

@@ -4,9 +4,38 @@ function toggleMenubar(){
 }
 
 function toggleDropdown(){
-    let dropdown = document.getElementById("dropdown") 
-    dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+    let dropdown = document.getElementById("dropdown")
+    let arrow = document.getElementsByClassName("title")[0].querySelector("h2")
 
+    dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+    arrow.innerHTML = arrow.innerHTML === "▴" ? "▾" : "▴";
+
+}
+
+function updateDropdown(classes, index){
+    //clearing dropdown
+    document.getElementById("dropdown").querySelector("div").innerHTML = "";
+
+    //adding new elements
+    var dropdownDiv = document.getElementById("dropdown").querySelector("div"); 
+    classes.forEach((e) => {
+        //avoiding the current class to be displayed in the dropdown
+        if(e.id != classes[index].id){
+            var newElem = document.createElement("h2");
+            newElem.innerHTML = e.id;
+
+            //adding the display logic
+            newElem.addEventListener("click", () => {
+                toggleDropdown();
+
+                index = classes.indexOf(e);
+                displayClasses(classes, index);
+                updateDropdown(classes, index);
+            });
+
+            dropdownDiv.appendChild(newElem);
+        }
+    });
 }
 
 function displayClasses(classes, index){
@@ -26,11 +55,18 @@ const main = () => {
     const classes = Array.from(document.querySelectorAll(".class"));
     var index = 0;
 
-    //menu toggle
+    //menu toggle and setup
+    updateDropdown(classes, index);
+
     Array.from(document.getElementsByClassName("menu-toggle")).forEach((e) => {
         e.addEventListener("click", () => {
             toggleMenubar();
         })
+    });
+
+    //dropdown menu toggle
+    document.getElementsByClassName("title")[0].querySelector("h1").addEventListener("click", () => {
+        toggleDropdown();
     });
 
     //Login and Signup button for menu and header
@@ -60,6 +96,7 @@ const main = () => {
         index >= (classes.length - 1) ? index=0 : index++; 
 
         displayClasses(classes, index);
+        updateDropdown(classes, index);
     })
 
     document.getElementById("button-previous").addEventListener("click", () => {
@@ -67,9 +104,11 @@ const main = () => {
         index <= 0 ? index= (classes.length - 1) : index--; 
 
         displayClasses(classes, index);
+        updateDropdown(classes, index);
     })
 
     toggleMenubar();
+    toggleDropdown();
     displayClasses(classes, index);
 }
 

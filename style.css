@@ -119,18 +119,32 @@ main .title{
 
     margin-bottom: 10px;
 }
+main .title h2{
+    height: fit-content;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 main .title button{
     background-color: transparent;
 }
 main .class{
     display: none;
 }
+main .class .gif{
+    scale: auto;
+    max-width: none;
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
 main .imgs{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 20px;
 }
 
 input{
@@ -172,6 +186,10 @@ a{
     text-align: justify;
     line-height: 2;
     word-spacing: 0.20vw;
+}
+.flex-text h3{
+    padding-top: 0px;
+    margin-top: 0px;
 }
 .flex-info{
     flex: 2;
@@ -240,6 +258,7 @@ a{
 
     margin-left: 0px;
 }
+
 .container-overlay-title{
     display: flex;
     flex-wrap: nowrap;
@@ -333,15 +352,39 @@ a{
 /* Dropdown menu */
 .dropdown{
     display: none;
+
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+}
+.dropdown div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
 
-    padding-top: 10px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
-    height: 100%;
+    min-width: 270px;
+    width: fit-content;
+
+    text-align: center;
+    border: 2px solid rgb(152, 4, 11);
+    border-radius: 10px;
+}
+.dropdown div h2{
+    margin: 0px;
+    padding: 5px;
+    height: fit-content;
 }
 
 /* Classi per il footer */
@@ -399,6 +442,10 @@ a{
         grid-row-gap: 20px;
     }
 
+    main .title button{
+        display: none;
+    }
+
 }
 @media screen and (max-width: 1350px) {
     flex{
@@ -419,7 +466,7 @@ a{
         grid-template-columns: auto;
         grid-row-gap: 20px;
     }
-    main .imgs{
+    main .meme{
         display: none;
     }
 }

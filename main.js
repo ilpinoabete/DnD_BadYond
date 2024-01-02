@@ -26,18 +26,12 @@ const main = () => {
     const classes = Array.from(document.querySelectorAll(".class"));
     var index = 0;
 
-    //initial display
-    toggleMenubar();
-    displayClasses(classes, index);
-    
-    //Adding event listeners:
-    //hamburger menu toggle
+    //menu toggle
     Array.from(document.getElementsByClassName("menu-toggle")).forEach((e) => {
         e.addEventListener("click", () => {
             toggleMenubar();
         })
     });
-
 
     //Login and Signup button for menu and header
     document.querySelectorAll(".menu-button button").forEach((e)=> {
@@ -74,6 +68,9 @@ const main = () => {
 
         displayClasses(classes, index);
     })
+
+    toggleMenubar();
+    displayClasses(classes, index);
 }
 
 main()

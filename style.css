@@ -331,6 +331,20 @@ a{
     text-align: center;
 }
 
+/* Dropdown menu */
+.dropdown{
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+    padding-top: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    height: 100%;
+}
+
 /* Classi per il footer */
 .footer-container{
     margin-right: auto;

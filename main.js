@@ -3,6 +3,12 @@ function toggleMenubar(){
     menu.style.display = menu.style.display === "none" ? "grid" : "none";
 }
 
+function toggleDropdown(){
+    let dropdown = document.getElementById("dropdown") 
+    dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+
+}
+
 function displayClasses(classes, index){
     document.getElementById("main-title").querySelector("h1").innerHTML = classes[index].id;
 

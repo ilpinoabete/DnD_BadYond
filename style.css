@@ -342,11 +342,15 @@ a{
 }
 .menu-search{
     grid-area: menu-search;
+    margin: 0px;
     padding: 0px;
-    /* width: 100%; */
+    width: 100%;
 }
 .menu-search input{
     text-align: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
 }
 
 /* Dropdown menu */
@@ -427,10 +431,6 @@ a{
     .flex-text{
         padding: 10px;
     }
-    
-    menu{
-        display: block;
-    }
     links{
         display: none;
     }
@@ -467,7 +467,7 @@ a{
         grid-row-gap: 20px;
     }
     main .meme{
-        display: none;
+        gap: 20px;
     }
 }
 

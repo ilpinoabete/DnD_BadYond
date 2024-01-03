@@ -55,16 +55,22 @@ const main = () => {
     const classes = Array.from(document.querySelectorAll(".class"));
     var index = 0;
 
-    //menu toggle and setup
-    updateDropdown(classes, index);
-
+    //menu toggle and logic
     Array.from(document.getElementsByClassName("menu-toggle")).forEach((e) => {
         e.addEventListener("click", () => {
             toggleMenubar();
         })
     });
 
-    //dropdown menu toggle
+    resizeObv = new ResizeObserver(() => {
+        if (window.innerWidth > 860){
+            document.getElementById("burger-menu").style.display = "none";
+        }
+    });
+
+    //dropdown menu toggle and setup
+    updateDropdown(classes, index);
+
     document.getElementsByClassName("title")[0].querySelector("h1").addEventListener("click", () => {
         toggleDropdown();
     });
@@ -110,6 +116,7 @@ const main = () => {
     toggleMenubar();
     toggleDropdown();
     displayClasses(classes, index);
+    resizeObv.observe(document.body);
 }
 
 main()
